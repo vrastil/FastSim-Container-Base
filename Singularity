@@ -10,7 +10,7 @@ From: debian:stretch
     apt-get -y install gcc-6 g++-6 libstdc++6 python python-pip
     apt-get -y install cmake git swig wget vim valgrind
     apt-get -y install libgsl-dev libfftw3-dev pkg-config
-    apt-get -y install libboost-dev libboost-filesystem-dev libboost-program-options-dev libboost-system-dev
+    apt-get -y install libboost-all-dev
     pip install numpy
 
     # get all libraries

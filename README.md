@@ -3,3 +3,10 @@
 #  FastSim Container (Base)
 This repository serves as a base image for [FastSim Container](https://github.com/vrastil/FastSim-Container)
 
+For direct download of the image:
+````sh
+singularity pull shub://vrastil/FastSim-Container-Base
+````
+
+More about singularity containers and how to use them at [https://singularity.lbl.gov/](https://singularity.lbl.gov/)
+ 
