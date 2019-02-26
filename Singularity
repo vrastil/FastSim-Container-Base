@@ -24,10 +24,3 @@ From: debian:stretch
     ./b2 install
     cd .. && rm -rf boost_1_69_0
 
-    # get and compile FastSim library (later changes should be compiled fast in derived containers)
-    cd /data
-    git clone https://github.com/vrastil/FastSim.git && cd FastSim
-    git submodule update --init --recursive
-    mkdir build && cd build
-    cmake ..
-    make
