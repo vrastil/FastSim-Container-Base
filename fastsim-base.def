@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: debian:stretch
+From: debian:buster
 
 %help
     Contains necessary packages and libraries to build image FastSim-Container (https://github.com/vrastil/FastSim-Container).
@@ -11,10 +11,13 @@ From: debian:stretch
     # get libraries from package manager
     apt-get -y update && apt-get install -y --no-install-recommends apt-utils
     apt-get -y install build-essential
-    apt-get -y install gcc-6 g++-6 libstdc++6 python python-pip
+    apt-get -y install gcc-8 g++-8 libstdc++-8-dev python python-pip
     apt-get -y install cmake git swig wget vim valgrind tar
     apt-get -y install libgsl-dev libfftw3-dev pkg-config libbz2-dev
-    pip install numpy
+
+    # python packages
+    python -m pip install --upgrade pip
+    pip install numpy scipy Jupyter matplotlib
 
     # data directory -- all building should be done here
     mkdir /data
