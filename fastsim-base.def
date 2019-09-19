@@ -5,6 +5,9 @@ From: debian:stretch
     Contains necessary packages and libraries to build image FastSim-Container (https://github.com/vrastil/FastSim-Container).
 
 %post
+    # set number of parallel jobs
+    NPROCESSES=16
+
     # get libraries from package manager
     apt-get -y update && apt-get install -y --no-install-recommends apt-utils
     apt-get -y install build-essential
@@ -21,6 +24,6 @@ From: debian:stretch
     wget https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.bz2
     tar --bzip2 -xf boost_1_69_0.tar.bz2 && cd boost_1_69_0
     ./bootstrap.sh --with-libraries=program_options,filesystem,system,log,timer,thread
-    ./b2 install
+    ./b2 install -j $NPROCESSES
     cd .. && rm -rf boost_1_69_0
 
