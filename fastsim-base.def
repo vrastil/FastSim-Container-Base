@@ -17,7 +17,7 @@ From: debian:buster
 
     # python packages
     python -m pip install --upgrade pip
-    pip install numpy scipy Jupyter matplotlib
+    pip install numpy scipy Jupyter matplotlib pymongo
 
     # data directory -- all building should be done here
     mkdir /data
